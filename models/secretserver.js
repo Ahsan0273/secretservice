@@ -5,7 +5,7 @@ const secretSchema = new mongoose.Schema({
     uuid : {
         type: String,
         required : true,
-        default: uuidv4()
+        default: () => uuidv4()
     },
     name : {
         type: String,

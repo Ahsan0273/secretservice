@@ -31,7 +31,7 @@ mongoose.connect(uri,{
 }).catch((err) => console.log(err))
 
 const secretserver = require('./routes/sercretserver');
-app.use('/',(req,res) => {res.send("Started")})
+
 app.use('/v1/secret', secretserver)
 
 app.listen(port, () => console.log('server started'))
